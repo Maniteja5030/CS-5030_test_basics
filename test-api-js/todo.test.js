@@ -50,5 +50,24 @@ describe('todo test suite', () => {
             "done": false
         }).todo.length).toEqual(3);
     });
-
+    test("update_todo", () => {expect(todo_service.update_todo(1,{
+        "title": "Update3",
+        "description": "Des1",
+        "done": false
+    }).todo[1]).toEqual({
+        "title": "Update3",
+        "description": "Des1",
+        "done": false
+    }); 
+    });
+    test("update_todo", () => {expect(todo_service.update_todo(1,{
+        "title": "Update4",
+        "description": "Des2",
+        "done": false
+    }).todo[1]).toEqual({
+        "title": "Update4",
+        "description": "Des2",
+        "done": false
+    }); 
+    });
 });
