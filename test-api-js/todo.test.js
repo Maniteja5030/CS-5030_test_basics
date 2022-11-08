@@ -36,5 +36,19 @@ describe('todo test suite', () => {
             "done": false
         }).todo.length).toEqual(5);
     });
+    test("delete_todo", () => {
+        expect(todo_service.delete_todo({
+            "title": "Add1",
+            "description": "D1",
+            "done": false
+        }).todo.length).toEqual(4);
+    });
+    test("delete_todo", () => {
+        expect(todo_service.delete_todo({
+            "title": "Add2",
+            "description": "D2",
+            "done": false
+        }).todo.length).toEqual(3);
+    });
 
 });
