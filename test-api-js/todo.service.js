@@ -29,12 +29,16 @@ class todoservice{
     }
 
     delete_todo(id){
-
+        this.todo_data.todo.splice(id, 1);
+        return this.todos;
        
     }
 
     update_todo(id, todo){
-        
+        console.log(this.todo_data.todo[id]);
+        this.todo_data.todo[id] = todo;
+        console.log(this.todo_data);
+        return this.todos;
     }
 }
 
